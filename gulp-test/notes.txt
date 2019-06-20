@@ -1,0 +1,57 @@
+#install gulp globally
+npm install gulp-cli --global
+gulp -v #show gulp version
+
+#install gulp into project
+    #in project directory
+
+    #save dev will add dependencies only for dev area
+    npm install gulp --save-dev
+
+
+#setting up gulp
+#gulp expects us to create a file called:
+
+gulpfile.js
+
+#it will contain information on hwat gulp has to do
+
+#gulp will not do much without plugins
+
+#plugins
+
+#gulp-watch
+sudo npm install gulp-watch --save-dev
+
+#import gulp watch in gulpfile.js
+var watch = require('gulp-watch')
+
+
+
+#css workflow
+    #autoprefixer
+    #sass, less, stylus
+    #postCSS
+
+# we will need 3 tools to process files, get their content modify those and save
+gulp.src() - where to pull the content from
+gulp.dest() - where to place the content
+.pipe() - filters/changes the content
+
+#installing postCSS
+npm install gulp-postcss --save-dev
+
+#we need to import postcss to gulpfile by 
+var postcss = require('gulp-postcss');
+
+#postcss does not do anything by itself, we will need to import aditional functions 
+
+#install autoprefixer
+npm install autoprefixer --save-dev
+
+#autoprefixer needs to be required as well
+
+#now we can include inside the pipe what we want postcss to do
+#postcss accepts array
+
+.pipe(postcss([autoprefixer]))

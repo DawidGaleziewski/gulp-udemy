@@ -1,0 +1,7 @@
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-columns: 300px 2;
+            columns: 300px 2;
+}

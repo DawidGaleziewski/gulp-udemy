@@ -1,0 +1,4 @@
+body {
+    display: flex;
+    columns: 300px 2;
+}

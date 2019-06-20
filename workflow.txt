@@ -1,0 +1,65 @@
+###basic workflow so far
+
+    #install node
+
+    #install npm
+        #start new npm project
+        npm init
+
+    #install features that need to be on production
+        npm install jquery --save
+
+    #install features that need to be on dev
+        npm install package-name --save-dev
+
+    #install gulp globally
+        npm install gulp-cli --global
+
+    #install gulp for project
+        npm install gulp --save-dev
+
+    #configure gulp
+        #create gulpfile.js in root directory
+
+    ##adding new gulp features
+        #install the package
+            sudo npm install package-name --save-dev
+
+        #gulpfile.js - require the package
+            var packageName = require('package-name')
+
+        #add this task
+            gulp.task('task-name', function(){
+                return gulp.src(./file.css)
+                .pipe(postcss[packageName])
+                .pipe(gulp.dest('./output_folder/'))
+            })
+
+    #most needed packages
+        #watcher
+        sudo npm install gulp-watch --save-dev
+
+    #installing postCSS
+        npm install gulp-postcss --save-dev
+
+    #install autoprefixer
+        npm install autoprefixer --save-dev
+
+
+    #create a task
+    gulp.task('taskname', function(){
+        return //code here
+    })
+
+    #set watcher
+    gulp.task('watch', function(){
+        watch('filename', function(){
+            gulp.start('taskname')
+        })
+    })
+
+    #manipluating files
+
+    return gulp.src('./watched.css')
+        .pipe(postcss([autoprefixer, anothermodule]))
+        .pipe(gulp.dest('./main/'));

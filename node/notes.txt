@@ -1,0 +1,4 @@
+#node
+
+#checking installed version
+node -v

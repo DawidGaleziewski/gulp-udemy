@@ -1,0 +1,15 @@
+#NPM helps us download packages and dependencies for project for example
+npm install jquery
+
+#npm init
+    #it will help us organize the project
+    #this creates package.json it tracks all packages for project
+
+    #we can now track our dependencies we need to install those with --save flag
+npm install jquery --save
+
+#if we lose our dependencies we can just 
+run npm install
+
+#versions
+npm install #by default will install newest version of package
